@@ -22,7 +22,9 @@ const SingleBook = ({books}) => {
                 <h3>{oneBook.author}</h3>
                 <h3>Available to checkout: {inStock}</h3>
                 <p>{oneBook.description}</p>
-                <img src={oneBook.coverimage} />       
+                <img className="width" src={oneBook.coverimage} /> 
+                <br />
+                <Link to='/books'>Back to books</Link>      
             </div>
         )
     }

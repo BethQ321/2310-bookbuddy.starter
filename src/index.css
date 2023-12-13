@@ -31,3 +31,14 @@ nav a{
   display: flex;
   flex-wrap: wrap;
 }
+
+.width {
+  width: 25%;
+
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

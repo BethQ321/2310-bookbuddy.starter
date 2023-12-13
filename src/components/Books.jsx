@@ -9,11 +9,11 @@ const Books = ({books}) => {
             <ul>
                 {
                     books.map((book) => {
+                        const inStock = book.available ? "yes" : "no"
                         return (
                             <li key={book.id}>
                                 <Link to={`/books/${book.id}`}>
-                                    {book.title}
-                                </Link>                   
+                                    {book.title} </Link> available: {inStock}
                             </li>
                         )
                     })

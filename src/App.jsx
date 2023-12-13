@@ -10,6 +10,7 @@ import Account from './components/Account'
 import SuccessRegi from './components/SuccessRegi'
 import Homepage from './components/Homepage'
 import SingleBook from './components/SingleBook'
+import SearchBar from './components/SearchBar'
 
 function App() {
   const [token, setToken] = useState(null)
@@ -52,7 +53,12 @@ function App() {
  
   return (
     <>
-    <h1><img id='logo-image' src={bookLogo}/><Link to='/'>Library App</Link></h1>
+      <header>
+        <h1><img id='logo-image' src={bookLogo}/><Link to='/'>Library App</Link></h1>
+        <h3>Search by title:</h3>
+        <SearchBar books={books} />
+      </header>
+    
     <Navigations user={user}/>
     <Routes>
       <Route path='/' element={<Homepage/>}/>
