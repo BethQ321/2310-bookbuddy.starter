@@ -1,4 +1,5 @@
 import { Link, useParams } from 'react-router-dom'
+import CheckOutButton from './CheckOutButton'
 
 const SingleBook = ({books}) => {
 
@@ -23,6 +24,7 @@ const SingleBook = ({books}) => {
                 <h3>Available to checkout: {inStock}</h3>
                 <p>{oneBook.description}</p>
                 <img className="width" src={oneBook.coverimage} /> 
+                <CheckOutButton books={books} />
                 <br />
                 <Link to='/books'>Back to books</Link>      
             </div>
