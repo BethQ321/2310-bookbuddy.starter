@@ -17,7 +17,7 @@ const CheckOutButton = ({books, user, setUser}) => {
         event.preventDefault()
 
         const loggedInToken = window.localStorage.getItem('token')
-        console.log({oneBook})
+        
         if(loggedInToken){
             const response = await axios.patch(`https://fsa-book-buddy-b6e748d1380d.herokuapp.com/api/books/${oneBook.id}`, {available: false}, {
             headers: {
@@ -36,7 +36,7 @@ const CheckOutButton = ({books, user, setUser}) => {
 
     return(
         <div>
-            <button onClick={handleSubmit}>
+            <button disabled={(oneBook.available && id) ? false : true } onClick={handleSubmit}>
                 Check out book
             </button>
         </div>

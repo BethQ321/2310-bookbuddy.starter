@@ -22,9 +22,9 @@ const SingleBook = ({books, user, setUser}) => {
                 <h1>{oneBook.title}</h1>
                 <h3>{oneBook.author}</h3>
                 <h3>Available to checkout: {inStock}</h3>
+                <CheckOutButton books={books} user={user} setUser={setUser} />
                 <p>{oneBook.description}</p>
                 <img className="width" src={oneBook.coverimage} /> 
-                <CheckOutButton books={books} user={user} setUser={setUser} />
                 <br />
                 <Link to='/books'>Back to books</Link>      
             </div>
