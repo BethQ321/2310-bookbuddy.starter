@@ -16,6 +16,7 @@ nav{
   display: flex;
   justify-content: space-around;
   background-color: lightgreen;
+  height: 35px;
 }
 
 nav span{
@@ -24,7 +25,8 @@ nav span{
 }
 
 nav a{
-  padding: 1rem;
+  padding: 0.3em;
+  text-decoration: none;
 }
 
 .registerForm {
@@ -41,4 +43,8 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+.selected {
+  border: 2px solid white;
 }

@@ -61,7 +61,7 @@ function App() {
     
     <Navigations user={user}/>
     <Routes>
-      <Route path='/' element={<Homepage/>}/>
+      <Route path='/' element={<Homepage user={user} />}/>
       <Route path='/successReg' element={<SuccessRegi />}/>
       <Route path='/books' element={<Books books={books} />}/>
       <Route path='/books/:id' element={<SingleBook books={books} user={user} setUser={setUser} />}/>

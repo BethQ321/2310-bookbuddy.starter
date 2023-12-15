@@ -5,7 +5,9 @@ const SearchBar = ({books}) => {
     const [searchTerm, setSearchTerm] = useState('')
 
     const filteredTerms = books.filter((book) => {
-        return book.title.indexOf(searchTerm) !== -1
+        const lowerBook = book.title.toLowerCase()
+        const lowerSearch = searchTerm.toLowerCase()
+        return (lowerBook.indexOf(lowerSearch) !== -1)
     })
 
     return(
