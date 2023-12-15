@@ -64,7 +64,7 @@ function App() {
       <Route path='/' element={<Homepage/>}/>
       <Route path='/successReg' element={<SuccessRegi />}/>
       <Route path='/books' element={<Books books={books} />}/>
-      <Route path='/books/:id' element={<SingleBook books={books} setToken={setToken} />}/>
+      <Route path='/books/:id' element={<SingleBook books={books} user={user} setUser={setUser} />}/>
       <Route path='/login' element={<Login setUser={setUser} setToken={setToken}/>}/>
       <Route path='/register' element={<Register />}/>
       <Route path='/account' element={<Account user={user} setUser={setUser} setToken={setToken}/>}/>

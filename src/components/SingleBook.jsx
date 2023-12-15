@@ -1,7 +1,7 @@
 import { Link, useParams } from 'react-router-dom'
 import CheckOutButton from './CheckOutButton'
 
-const SingleBook = ({books}) => {
+const SingleBook = ({books, user, setUser}) => {
 
     const params = useParams()
     const id = params.id*1
@@ -24,7 +24,7 @@ const SingleBook = ({books}) => {
                 <h3>Available to checkout: {inStock}</h3>
                 <p>{oneBook.description}</p>
                 <img className="width" src={oneBook.coverimage} /> 
-                <CheckOutButton books={books} />
+                <CheckOutButton books={books} user={user} setUser={setUser} />
                 <br />
                 <Link to='/books'>Back to books</Link>      
             </div>

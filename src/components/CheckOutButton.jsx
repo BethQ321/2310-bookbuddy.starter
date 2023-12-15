@@ -2,7 +2,7 @@ import axios from "axios"
 import { useParams } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
 
-const CheckOutButton = ({books}) => {
+const CheckOutButton = ({books, user, setUser}) => {
     
     const params = useParams()
     const id = params.id*1
@@ -25,7 +25,9 @@ const CheckOutButton = ({books}) => {
                 'Authorization': `Bearer ${loggedInToken}`
             }
             })
-            navigate(`/books/${oneBook.id}`)
+            console.log({user})
+            setUser({books: [...user.books], oneBook})
+            navigate(`/account`)
             console.log(response)
         }else{            
             throw 'no token'
