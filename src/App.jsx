@@ -53,22 +53,28 @@ function App() {
  
   return (
     <>
-      <header>
-        <h1><img id='logo-image' src={bookLogo}/><Link to='/'>Library App</Link></h1>
-        <h3>Search by title:</h3>
-        <SearchBar books={books} />
-      </header>
+    <h1><img id='logo-image' src={bookLogo}/><Link to='/'>Library App</Link></h1>
+        
     
     <Navigations user={user}/>
-    <Routes>
-      <Route path='/' element={<Homepage user={user} />}/>
-      <Route path='/successReg' element={<SuccessRegi />}/>
-      <Route path='/books' element={<Books books={books} />}/>
-      <Route path='/books/:id' element={<SingleBook books={books} user={user} setUser={setUser} />}/>
-      <Route path='/login' element={<Login setUser={setUser} setToken={setToken}/>}/>
-      <Route path='/register' element={<Register />}/>
-      <Route path='/account' element={<Account user={user} setUser={setUser} setToken={setToken}/>}/>
-    </Routes>
+
+    <div className="container">
+      <div className="child1">
+        <Routes>
+          <Route path='/' element={<Homepage user={user} />}/>
+          <Route path='/successReg' element={<SuccessRegi />}/>
+          <Route path='/books' element={<Books books={books} />}/>
+          <Route path='/books/:id' element={<SingleBook books={books} user={user} setUser={setUser} />}/>
+          <Route path='/login' element={<Login setUser={setUser} setToken={setToken}/>}/>
+          <Route path='/register' element={<Register />}/>
+          <Route path='/account' element={<Account user={user} setUser={setUser} setToken={setToken}/>}/>
+        </Routes>
+      </div>
+      <div className="child2">
+        <h3>Search by title:</h3>
+        <SearchBar books={books} />
+      </div>
+    </div>
 
       
     </>
